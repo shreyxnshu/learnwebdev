@@ -9,4 +9,4 @@ function tochangespace(str){
     }
    console.log(s)
 }
-tochangespace(" Hey there im Shreyanshu Sinha")
+tochangespace(" The quick brown fox jumps over the lazy dog")
