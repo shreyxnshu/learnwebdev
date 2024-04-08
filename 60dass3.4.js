@@ -6,3 +6,4 @@ function casecheck (char){
         console.log("Not a small case")
     }
 }
+function casecheck("b")
