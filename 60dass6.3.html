@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> BMI Calculator </title>
+        <style>
+            #container{
+                box-shadow: 4px 4px 4px 4px lightslategray;
+                width: 40%;
+                height: 35%;
+                margin: auto;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 25px;
+                margin-top: 12%;
+            }
+            .inputs{
+                display: flex;
+                width: 50%;
+                height: 45px;
+                margin:auto;
+                padding-bottom: 5px;
+                justify-content: space-between;
+                
+            }
+            #button{
+                margin-top: 10px;
+            }
+            #result{
+                
+                height: 20%;
+                width: 100%;
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h2> BMI Calculator </h2>
+
+            <div class="inputs">
+                <h4> Enter Weight </h4>
+                <input type="text" placeholder=" Weight (in kg) " id="weight">
+            </div>
+            <div class="inputs">
+                <h4> Enter Height </h4>
+                <input type="text" placeholder=" Height (in m) " id="hight">
+            </div>
+            <div id="button">
+            <button onclick="bmi()"> Calculate </button>
+            </div>
+            <div id="result">
+                <p>Result: </p>
+
+            </div>
+        </div>
+    </body>
+    <script>
+        function bmi(){
+            let inpw=document.getElementById("weight")
+            let inph=document.getElementById("hight")
+            inputweight=parseFloat(inpw.value)
+            inputhight=parseFloat(inph.value)
+            let bmi = (inputweight) / (inputhight * inputhight)
+            let box=document.querySelector("#result")
+            let result=document.createElement("p")
+            
+            if (bmi <= 18.4){
+                result.innerHTML= `<p> Your BMI is ${bmi} which means you are Under Weight`
+                    box.append(result)
+            }
+            else if (bmi >= 18.5 && bmi <= 24.9){
+                result.innerHTML= `<p> Your BMI is ${bmi} which means you are Normal Weight`
+                    box.append(result)
+            }
+            else if (bmi >= 25 && bmi <= 29.9){
+                result.innerHTML= `<p> Your BMI is ${bmi} which means you are Over Weight`
+                    box.append(result)
+            }
+            else if (bmi >= 30){
+                result.innerHTML= `<p> Your BMI is ${bmi} which means you are Obese`
+                    box.append(result)
+            } 
+        }
+    </script>
+</html>
