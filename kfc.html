@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> KFC | Order KFC Chicken Online </title>
+        <style> 
+           #upheader{
+            display: flex;
+            justify-content: space-evenly;
+            width: 35%;
+            height: 30px;
+            margin: auto;
+           }
+
+           #upheader>p{
+            margin-top: 2px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           }
+
+           #upheader>button{
+            background-color: brown;
+            border-radius: 30px;
+            font-style:normal;
+            color: white;
+            width: 100px;
+           }
+
+           #header{
+            /* border: 1px black solid; */
+            height: 80px;
+            padding-top: 15px ;
+            display: flex;
+            justify-content: space-between;
+           }
+
+           #left{
+            /* border: 1px blue solid; */
+            display: flex;
+            width: 20%;
+            align-items: center;
+            justify-content: space-evenly;
+            text-decoration: bold;
+            margin-left: 100px;
+           }
+
+           #right{
+            display: flex;
+            /* border: 1px blue solid; */
+            margin-right: 100px;
+            width: 13%;
+            justify-content: space-evenly;
+           }
+
+           #right>p{
+            margin-top: 26px;
+           }
+
+           #content{
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px black solid; */
+            width: 40%;
+            margin: auto;
+            color: white;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+           }
+           #belowheader{
+            background-color: darkred;
+            height: 70px;
+            padding-top: 16px;
+           }
+
+           #content>button{
+            margin-right: 20px;
+            width: 130px;
+            background-color: brown;
+            color: white;
+            border-radius: 30px ;
+           }
+
+           #heading{
+             margin-left: 20%;
+             font-size: 35px;
+             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           }
+           #division{
+            display: grid;
+            /* border: 1px solid black; */
+            grid-template-columns: 230px 230px 230px 230px;
+            grid-template-rows: 230px 230px;
+            gap: 22px;
+            padding-left: 20%;
+
+            }
+           .section{
+            /* border: 1px solid blue; */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+
+            
+           }
+           .section>img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+           }
+
+           #secondbox{
+            width: 100%;
+            background-color: darkred;
+            display: flex;
+            flex-direction: row-reverse;
+           }
+           .sec{
+            border: 1px black solid;
+            background-color: aliceblue;
+            width: 250px;
+            margin: 5px;
+            height: 350px;
+            text-align: center;
+            border-radius: 20px ;
+
+           }
+           .sec>img{
+            border-top-left-radius: 20px ;
+            border-top-right-radius: 20px;
+           }
+           .sec>h1{
+            text-align: center;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-top: 2px;
+            color: darkgreen;
+           }
+           .sec>p{
+            margin-top: 1px;
+           }
+
+           .apply{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 11px;
+            color: darkslategray;
+            
+           }
+           .apply>button{
+            margin-right: 30px;
+            background-color: white;
+            border-radius: 30px;
+            width: 50%;
+            height: 40px;
+           }
+           #abovesec{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            background-color: darkred;
+            padding-top: 80px;
+
+            
+           }
+           #abovesec>h1{
+            margin-left: 290px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+
+           }
+           #abovesec>p{
+            margin-right: 130px;
+            margin-top: 35px;
+            color: white;
+            text-decoration: underline;
+           }
+           #division{
+            margin-bottom: 80px ;
+           }
+           #futer{
+            padding-top: 130px;
+            height: 300px;
+            background-color:rgb(42, 22, 22);
+           }
+           #futsec{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+            background-color:rgb(42, 22, 22);
+           }
+           #futsec>p{
+            text-decoration: underline;
+            color: white;
+            margin-top: 90px;
+           }
+           #futgrid{
+            display: grid;
+            color: white;
+            height: 200px;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 30px 30px 30px 30px 30px;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="upheader">
+            <img src="data:image/png;base64,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" width="30px">
+            <p> Allow location access for local store menu and promos </p> 
+            <button> Set location </button>
+        </div>
+    <hr/>
+    <div id="header">
+        <div id="left">
+            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg">
+            <p><b> Menu </b></p>
+            <p><b> Deals </b></p>
+        </div>
+        <div id="right"> 
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" width="30px">
+            <p><b> Sign In </b></p>
+            <p> ₹0 </p>
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" width="50px"> 
+        </div>
+    </div>
+    <div id="belowheader">
+     <div id="content">
+        <p>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN </p>
+        <button> Start Order </button>
+     </div>
+    </div>
+    <img src="https://images.ctfassets.net/wtodlh47qxpt/65FNUKrvtQQjE6ppSFpOta/255549f3834fda4441275eabe15feccc/App_750x634px.jpg?w=1536&fit=fill&fm=webp" width="100%" height="400px">
+    <div id="heading">
+        <h3> Browse Categories </h3>    
+    </div>
+    <div id="division">
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT289.jpg?ver=45.1" width="100%" >
+            <p>INTERNATIONAL BURGER FEST</p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT287.jpg?ver=45.1" width="100%" >
+            <p> MATCH DAY COMBOS </p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT228.jpg?ver=45.1" width="100%" >
+            <p>VALUE KUCH SPECIAL</p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=45.1" width="100%" >
+            <p>BOX MEALS</p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=45.1" width="100%" >
+            <p> BURGERS </p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=45.1" width="100%" >
+            <p> CHICKEN BUCKET</p>
+        </div>
+        <div class="section">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT213.jpg?ver=45.1" width="100%" >
+            <p> RICE BOWLZ</p>
+        </div>
+        <div class="section">
+            <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" width="100%" >
+            <p> View All Menu --></p>
+        </div>
+    </div>
+    <div id="abovesec">
+    <h1> EXCLUSIVE OFFERS FOR YOU </h1>   
+    <p> View all deal --> </p> 
+    </div>
+    <div id="secondbox">
+        <div class="sec">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/PHP75.jpg?ver=45.1" width="100%">
+            <h1> GET FLAT RS.75 OFF ..</h1>
+            <p> Get Rs. 75 off on a cart  value of Rs. 599 or above  </p>
+            <div class="apply">
+                <p> View More </p>
+                <button> Apply Offer </button>
+            </div>
+        </div>
+        <div class="sec">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/BIGSAVE.jpg?ver=45.1" width="100%">
+            <h1> UPTO RS. 100 OFF..</h1>
+            <p> Upto Rs. 100 Off on min Cart value of Rs. 699 or more. Applicable on 4th ..  </p>
+            <div class="apply">
+                <p> View More </p>
+                <button>Apply Offer</button>
+            </div>
+        </div>
+        <div class="sec">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/ADDCHK99.jpg?ver=45.1" width="100%">
+            <h1> ADD TO PC HOT N...</h1>
+            <p> Add 2 Pc Hot n Crispy Chicken at just 99 on min cart value of Rs 499... </p>
+            <div class="apply">
+                <p> View More </p>
+                <button>Apply Offer</button>
+            </div>
+        </div>
+        <div class="sec">
+            <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/xl/CHKZINGER.jpg?ver=45.1" width="100%">
+            <h1> FREE CHICKEN...</h1>
+            <p> 1 Pc Free Chicken Zinger on a chart value of 499 or above on first order. </p>
+            <div class="apply">
+                <p> View More </p>
+                <button>Apply Offer</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="futer">
+            
+            <div id="futsec">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg">
+                <div id="futgrid">
+                    <p>Legal</p>
+                    <p> KFC India</p>
+                    <p>KFC Food</p>
+                    <p>Support</p>
+                    <p>Terms and Conditions</p>
+                    <p>About KFC</p>
+                    <p>Menu</p>
+                    <p>Get Help</p>
+                    <p>Privacy Policy</p>
+                    <p>KFC Care</p>
+                    <p>Order Lookup</p>
+                    <p>Contact Us</p>
+                    <p>Disclaimer</p>
+                    <p>Careers</p>
+                    <p>Gift Cards</p>
+                    <p>KFC Feedback</p>
+                    <p>Caution Notice</p>
+                    <p>Our Golden Past</p>
+                    <p>Nutrition & Allergen</p>
+                    <p>Privacy Policy</p>
+
+                </div>
+                <p> Find a KFC  </p>
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg"> 
+            </div>
+            <p style="text-align: center; color: white; margin-top: 70px;">
+                Copyright © KFC Corporation 2024 All rights reserved
+            </p>
+        
+
+    </div>
+         
+    
+    
+
+    </body>
+</html>
