@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 2</title>
+    <style>
+        #container>div{
+            display: flex;
+            width: 10%;
+            justify-content: space-around;
+            border: black solid 1px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button> Fetch Users </button>
+    <div id="container">
+
+    </div>
+
+</body>
+<script>
+    let container = document.getElementById("container")
+    let button = document.querySelector("button")
+    function getData(URL){
+    fetch("https://fakestoreapi.com/users")
+    .then((res)=>{
+        return res.json()
+    }).then((res)=>{
+        console.log(res)
+        handleclick(res)
+    })
+
+    }
+    button.addEventListener("click" , handleclick)
+   
+    function handleclick(arr){
+        arr.forEach(function (ele , i){
+            let box = document.createElement("div")
+
+            let firstname = document.createElement("h3")
+            firstname.innerHTML = ele.name.firstname
+            let lastname = document.createElement("h3")
+            lastname.innerHTML = ele.name.lastname
+
+            box.append(firstname ,  lastname)
+            container.append(box)
+        })
+    }
+    getData("https://fakestoreapi.com/users")
+</script>
+</html>
