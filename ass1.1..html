@@ -8,13 +8,6 @@
 <body>
     <div id="root">
     </div>
-    <div id="reac">
-    </div>
-    <div id="javasc">
-    </div>
-    <div id="dif">
-
-    </div>
     
 </body>
 <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
@@ -24,29 +17,7 @@
 <script>
     let rootElement = document.getElementById("root")
     let a = React.createElement("p",null,"Sieze The Day")
-    ReactDOM.createRoot(rootElement).render(a)
-
-
-    let eltwo = document.getElementById("reac")
-    let b = React.createElement("p", null, "This text is generated using ReactDom, you can visit code")
-    ReactDOM.createRoot(eltwo).render(b) 
-
-    
-    let elethr = document.getElementById("javasc")
-    let text = "This Text is generated using JS Dom "
-    let c = document.createElement("p")
-    c.innerText = text
-    elethr.append(c)
-
-    let dif = document.getElementById("dif")
-    let d = React.createElement("p",null,"1. React Dom is faster compared to jsDom 2. Better perfomance and easy to read ")
-    ReactDOM.createRoot(dif).render(d)
-
-
-    
-
-
-    
+    ReactDOM.createRoot(rootElement).render(a) 
 
 
     
