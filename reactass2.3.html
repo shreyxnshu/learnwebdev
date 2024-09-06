@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+  <style>
+    #box{
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const AddImage=({data})=>{
+        return(
+            <div id="box">
+                {
+                    data.map((ele)=>{
+                        return(
+                            <image src={data.imageurl}/>   
+                        )
+                    })
+                }
+            </div>
+        )
+            
+    }
+
+
+    const App=()=>{
+        let images = [
+       {
+          "description":"Lady with a red umbrella",
+         "imageurl":"https://rukminim2.flixcart.com/image/850/1000/xif0q/shopsy-poster/r/j/u/medium-dm-205-tiger-paper-print-poster-animal-tiger-poster-sher-original-imagg494t5tkkxmv.jpeg?q=90&crop=false"
+        },
+        {
+         "description":"Flowers and some fruits",
+          "imageurl":"https://d1jyxxz9imt9yb.cloudfront.net/medialib/5027/image/s768x1300/3_reduced.jpg"
+           },
+       {
+        "description":"Beautiful scenery",
+        "imageurl":"https://media.istockphoto.com/id/1420676204/photo/portrait-of-a-royal-bengal-tiger-alert-and-staring-at-the-camera-national-animal-of-bangladesh.jpg?s=612x612&w=0&k=20&c=0OCYv99Ktv3fJ-YYlg7SetHBJj3pIk58WY7GDy5VCtI="
+       }    
+         ]  ;
+           return(
+                 <AddImage data={images}/>
+             )
+    }
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App/>)
+
+  </script>
+</body>
+</html>
