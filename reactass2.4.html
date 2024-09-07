@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components in React</title>
+  <style>
+
+    #container{
+        display: flex;
+        margin-top: 50px;
+        width: 68%;
+        margin: auto;
+        margin-top: 50px;
+        justify-content: space-around;
+        
+    }
+    .box{
+        width: 320px;
+        height: auto;
+        padding-top: 50px;
+        font-size: larger;
+    }
+    .box>button{
+        background-color: rgb(191, 160, 84);
+        border: 1px solid rgb(191, 160, 84);
+        height: 40px;
+        font-size: large;
+        width: 40px;
+        border-radius: 5px;
+        color: rgb(152, 30, 30);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #whole{
+       margin-top: 100px;
+       padding-top: 50px;
+       width: 100%;
+       background-color: rgb(241, 244, 245);
+       text-align: center;
+    }
+    #heading{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .box>h4{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(11, 16, 43);
+    }
+    .box>p{
+        color: darkcyan;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const Heading=()=>{
+        return(
+            <div id="heading">
+            <h1> Getting started in 3 easy steps </h1>
+            </div>
+        )
+    }
+    const Box1=()=>{
+        return(
+            <div class="box">
+            <button>01</button>
+            <h4> Find your template </h4>
+            <p>Every template is embeded within an iframe, so you can easily check
+                what they look like and test the responsive behaviour. </p>
+            </div>
+        )
+    }
+    const Box2=()=>{
+        return(
+            <div class="box">
+            <button>02</button>
+            <h4> Copy the code </h4>
+            <p>Click the code tab to see the actual source code of the template. Copy and paste
+                it into your project and adjust it to your needs.</p>
+            </div>
+        )  
+    }
+    const Box3=()=>{
+        return(
+            <div class="box">
+            <button>03</button>
+            <h4> Enjoy your free time </h4>
+            <p> You've just saved yourself a bunch of time not building the same stuff over and over again.
+                Enjoy your free time, and build business features.</p>
+            </div>
+        ) 
+    }
+    const App=()=>{
+        return(
+        <div id="whole">
+        <Heading/>
+            <div id="container">
+                <Box1/>
+                <Box2/>
+                <Box3/>
+            </div>
+        </div>
+        )
+
+    }
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App/>)
+  </script>
+</body>
+</html>
