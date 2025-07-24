@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment </title>
+    <style>
+        *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Flexbox container */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* Individual boxes */
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+/* Fixed element - centered */
+.text {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .box {
+    width: 80px;
+    height: 80px;
+    line-height: 60px;
+  }
+
+  .text {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Debugging Task</h1>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <p class="text">Fix my position!</p>
+</body>
+</html>
