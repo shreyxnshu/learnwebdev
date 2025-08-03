@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic List Demo</title>
+  <style>
+    .odd {
+      font-weight: bold;
+      color: blue;
+    }
+    .even {
+      font-style: italic;
+      color: red;
+    }
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="my-list">
+    <li class="odd">Item 1</li>
+    <li class="even">Item 2</li>
+    <li class="odd">Item 3</li>
+  </ul>
+
+  <button id="add-btn">Add Item</button>
+
+  <script>
+    const ul = document.querySelector('#my-list');
+    const button = document.getElementById('add-btn');
+
+    function styleListItems() {
+      
+      const lis = ul.querySelectorAll('li');
+      lis.forEach((li, i) => {
+        li.classList.remove('odd', 'even');
+        if ((i + 1) % 2 === 1) {
+          li.classList.add('odd');
+        } else {
+          li.classList.add('even');
+        }
+      });
+    }
+
+    button.addEventListener('click', () => {
+      const newLi = document.createElement('li');
+      newLi.textContent = "New Item";
+      ul.appendChild(newLi);
+      styleListItems();
+    });
+
+    
+    styleListItems();
+  </script>
+
+</body>
+</html>
